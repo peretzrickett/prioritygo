@@ -1,9 +1,26 @@
 package data
 
-import pb "github.com/priority-infra/go_exam/internal/protos"
+type Employee struct {
+	ID           int
+	Name         string
+	Position     string
+	DepartmentID int
+}
 
+type Department struct {
+	ID   int
+	Name string
+}
+
+type Project struct {
+	ID           int
+	Name         string
+	DepartmentID int
+}
 type ExamServer struct {
-	pb.UnimplementedExamServer
+	employees   []Employee
+	departments []Department
+	projects    []Project
 }
 
 func (e *ExamServer) buildData() {
