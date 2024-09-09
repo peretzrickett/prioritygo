@@ -1,6 +1,10 @@
 package data
 
-import exam "github.com/priority-infra/go_exam/internal/protos"
+import pb "github.com/priority-infra/go_exam/internal/protos"
+
+type ExamServer struct {
+	pb.UnimplementedExamServer
+}
 
 func (e *ExamServer) buildData() {
 	e.buildDepartments()
