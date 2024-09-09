@@ -9,6 +9,7 @@ import (
 	"syscall"
 
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 
 	exam "github.com/priority-infra/go_exam/internal/protos"
 	pb "github.com/priority-infra/go_exam/internal/protos" // Add this line to import the pb package
