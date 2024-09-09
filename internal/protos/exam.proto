@@ -56,6 +56,11 @@ message Projects {
     repeated Project Projects = 1;
 }
 
+message ManagerProjects {
+    string manager_name = 1;
+    int64 project_count = 2;
+}
+
 service Exam {
     rpc GetEmployeeByID(ID) returns (Employee);
     rpc GetEmployeeList(Empty) returns (Employees);
@@ -63,4 +68,5 @@ service Exam {
     rpc GetDepartmentList(Empty) returns (Departments);
     rpc GetProjectByID(ID) returns (Project);
     rpc GetProjectList(Empty) returns (Projects);
+    rpc GetManagerProjects(Empty) returns (stream ManagerProjects);
 }
