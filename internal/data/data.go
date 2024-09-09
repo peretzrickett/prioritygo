@@ -1,4 +1,4 @@
-package main
+package data
 
 import exam "github.com/priority-infra/go_exam/internal/protos"
 
